@@ -14,7 +14,7 @@ Connect your components to the ESP32 using the following pins:
 | :--- | :--- | :--- |
 | VCC | 3.3V | Do not use 5V if sensor is 3.3V only |
 | GND | GND | |
-| Data / SDA | GPIO 21 | |
-| SCL | GPIO 22 | |
+| Data / SDA | GPIO 4 | |
+
 
 
