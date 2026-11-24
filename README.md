@@ -16,5 +16,13 @@ Connect your components to the ESP32 using the following pins:
 | GND | GND | |
 | Data / SDA | GPIO 4 | |
 
+## Intallation:
+1. Clone this repo (Git is required):
+   
+   ```bash
+   git clone https://github.com/LeouigiKyle-31/ESP32-Weather-Station.git
+   ```
+2. 
+
 
 
