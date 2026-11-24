@@ -16,7 +16,7 @@ Connect your components to the ESP32 using the following pins:
 | GND | GND | |
 | Data / SDA | GPIO 4 | |
 
-## Intallation:
+## Intallation/Usage:
 1. Clone this repo (Git is required):
    
    ```bash
