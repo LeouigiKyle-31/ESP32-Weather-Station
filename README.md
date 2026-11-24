@@ -22,7 +22,9 @@ Connect your components to the ESP32 using the following pins:
    ```bash
    git clone https://github.com/LeouigiKyle-31/ESP32-Weather-Station.git
    ```
-2. 
+2. Open the folder using vscode with PlatformIO.
+3. Select your ESP32 board and COM port, then click **Upload**.
+4. Open the **Serial Monitor** at `115200` baud to see the output.
 
 
 
