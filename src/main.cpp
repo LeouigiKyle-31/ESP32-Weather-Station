@@ -7,6 +7,8 @@
 
 const char *ssid = SECRET_SSID;
 const char *password = SECRET_PASS;
+const char *ap_ssid = HOSTNAME;
+const char *ap_password = AP_PASS;
 
 // DHT Sensor Setup
 #define DHTPIN 4 // GPIO number where the  sensor is connected
@@ -170,17 +172,19 @@ void setup(){
   Serial.begin(115200);
   dht.begin();
 
-  WiFi.begin(ssid, password);
-  Serial.println("Connecting to Wifi : ");
+  Serial.println("Setting up Access Point...");
 
-  while (WiFi.status() != WL_CONNECTED)
-  {
-    delay(500);
-    Serial.print("~");
+  WiFi.mode(WIFI_AP);
+
+  if (!WiFi.softAP(HOSTNAME, AP_PASS)) {
+    Serial.println("Failed to start Access Point");
+    return;
   }
-  Serial.println("Connected to Wifi");
-  Serial.print("IP Address: ");
-  Serial.println(WiFi.localIP());
+
+  Serial.print("AP SSID: ");
+  Serial.println(WiFi.softAPSSID());
+  Serial.println("Access Point IP: ");
+  Serial.println(WiFi.softAPIP());
 
   readSensor();
   lastRead = millis();
